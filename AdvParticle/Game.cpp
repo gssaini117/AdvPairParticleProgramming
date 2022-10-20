@@ -8,8 +8,14 @@ const int NUM_OBJECTS = 50;
 
 Game::Game() {
 	objects = new GameObject* [NUM_OBJECTS];
-	for (int i = 0; i < NUM_OBJECTS; i++) {
-		objects[i] = new GameObject();
+	for (int i = 0; i < NUM_OBJECTS/2; i++) {
+		objects[i] = new HCircle();
+		objects[i]->setPosition(Vector2f(375, 275));
+		objects[i]->setSize(50);
+
+	}
+	for (int i = NUM_OBJECTS/2; i < NUM_OBJECTS; i++) {
+		objects[i] = new VCircle();
 		objects[i]->setPosition(Vector2f(375, 275));
 		objects[i]->setSize(50);
 

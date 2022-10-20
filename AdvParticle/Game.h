@@ -6,6 +6,8 @@
 #include <SFML/OpenGL.hpp>
 #include <SFML/Main.hpp>
 #include "GameObject.h"
+#include "VCircle.h"
+#include "HCircle.h"
 
 namespace gm {
 	class Game {

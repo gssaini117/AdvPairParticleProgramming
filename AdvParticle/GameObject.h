@@ -10,6 +10,10 @@
 #include <SFML/Main.hpp>
 
 namespace gm {
+	
+	const int MinMovement = -3;
+	const int MaxMovement = 3;
+
 	class GameObject {
 	private:
 		sf::CircleShape* shape;
@@ -17,7 +21,7 @@ namespace gm {
 		GameObject();
 		GameObject(const sf::Vector2f& position, float size);
 		~GameObject();
-		void update(sf::RenderWindow& window);
+		virtual void update(sf::RenderWindow& window);
 		void render(sf::RenderWindow& window);
 		const sf::Vector2f& getPosition() const;
 		void setPosition(const sf::Vector2f& position);
