@@ -1,0 +1,5 @@
+﻿  Game.cpp
+C:\Users\gurki\OneDrive\Documents\GAME 230\AdvPairParticleProgramming\AdvParticle\Game.cpp(23,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  main.cpp
+  Generating Code...
+  AdvParticle.vcxproj -> C:\Users\gurki\OneDrive\Documents\GAME 230\AdvPairParticleProgramming\AdvParticle\Debug\AdvParticle.exe
