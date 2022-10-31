@@ -9,10 +9,11 @@
 #include <SFML/OpenGL.hpp>
 #include <SFML/Main.hpp>
 
+
 namespace gm {
 	class Game {
 	private:
-
+		
 	public:
 		Game();										// Constructor
 		~Game();									// Destructor

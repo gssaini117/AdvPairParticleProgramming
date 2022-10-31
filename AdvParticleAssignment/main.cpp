@@ -14,7 +14,7 @@ using namespace gm;
 
 int main()
 {
-    RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
+    RenderWindow window(sf::VideoMode(800, 600), "Advanced Particles!");
     Game game;
     
     // game loop
