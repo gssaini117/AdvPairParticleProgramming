@@ -19,6 +19,22 @@ void Particle::render(RenderWindow& window) {
 
 }
 
+const sf::Vector2f& Particle::getPosition() const {
+	return position;
+}
+
+const sf::Vector2f& Particle::getVelocity() const {
+	return velocity;
+}
+
+void Particle::setPosition(const sf::Vector2f& pos) {
+	position = pos;
+}
+
+void Particle::setVelocity(const sf::Vector2f& vel) {
+	velocity = vel;
+}
+
 int Particle::getLifespan() {
 	return lifespan;
 }
