@@ -15,7 +15,7 @@
 namespace gm {
 	class ParticleEffect {
 	protected:
-		CircleParticle* particles;
+		CircleParticle** particles;
 		sf::Vector2f origin;
 		int pCount;
 	public:

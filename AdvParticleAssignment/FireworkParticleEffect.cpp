@@ -16,6 +16,8 @@ FireworkParticleEffect::FireworkParticleEffect(Vector2f& o, int count) {
 }
 
 FireworkParticleEffect::~FireworkParticleEffect() {
+	for (int i = 0; i < pCount; i++)
+		delete particles[i];
 	delete[] particles;
 }
 
@@ -26,8 +28,10 @@ void FireworkParticleEffect::createParticle(int i) {
 	Color orange = Color(r, g, b);
 
 	float xVel = Random::Range((float) -0.4, 0.4);
-	float yVel = Random::Range((float) -0.25, -0.45);
+	float yVel = Random::Range((float) -0.2, -0.4);
+	if (xVel < 0.25 && xVel > -0.25) yVel = Random::Range((float) -0.2, -0.6);
+	if (xVel < 0.1 && xVel > -0.1) yVel = Random::Range((float) -0.2, -0.75);
 	Vector2f vel = Vector2f(xVel, yVel);
 	
-	particles[i] = CircleParticle(origin, vel, 800, 15, orange);
+	particles[i] = new CircleParticle(origin, vel, 800, 15, orange);
 }

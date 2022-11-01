@@ -10,6 +10,7 @@
 #include <SFML/Main.hpp>
 #include "ParticleEffect.h"
 #include "FireworkParticleEffect.h"
+#include "SnowfallParticleEffect.h"
 #include "Particle.h"
 #include "CircleParticle.h"
 

@@ -139,6 +139,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleEffect.cpp" />
+    <ClCompile Include="SnowfallParticleEffect.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\PairParticleProgramming\Pair Particle Programming\Random.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticleEffect.h" />
+    <ClInclude Include="SnowfallParticleEffect.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

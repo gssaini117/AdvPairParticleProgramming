@@ -42,13 +42,13 @@ void Game::inputs(RenderWindow& window) {
 
             // left click creates
             if (event.mouseButton.button == Mouse::Left) {
-                FireworkParticleEffect* firework = new FireworkParticleEffect(fMouse, 200);
+                FireworkParticleEffect* firework = new FireworkParticleEffect(fMouse, 50);
                 effects[cursor] = firework;
             }
             // right click creates
             if (event.mouseButton.button == Mouse::Right) {
-                FireworkParticleEffect* firework = new FireworkParticleEffect(fMouse, 10);
-                effects[cursor] = firework;
+                SnowfallParticleEffect* snowfall = new SnowfallParticleEffect(fMouse, 200);
+                effects[cursor] = snowfall;
             }
         }
     }

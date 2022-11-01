@@ -7,7 +7,6 @@ ParticleEffect::ParticleEffect() {
 	origin = Vector2f(400, 300);
 	pCount = 10;
 	createParticleArray();
-
 }
 
 ParticleEffect::ParticleEffect(Vector2f& o, int count) {
@@ -17,11 +16,14 @@ ParticleEffect::ParticleEffect(Vector2f& o, int count) {
 }
 
 ParticleEffect::~ParticleEffect() {
+	for (int i = 0; i < pCount; i++) {
+		delete particles[i];
+	}
 	delete[] particles;
 }
 
 void ParticleEffect::createParticleArray() {
-	particles = new CircleParticle[pCount];
+	particles = new CircleParticle* [pCount];
 	for (int i = 0; i < pCount; i++) {
 		createParticle(i);
 	}
@@ -38,19 +40,19 @@ const sf::Vector2f& ParticleEffect::getOrigin() const {
 bool ParticleEffect::isAlive() const {
 	bool alive = false; 
 	for (int i = 0; i < pCount; i++) {
-		alive = alive || particles[i].isAlive();
+		alive = alive || particles[i]->isAlive();
 	}
 	return alive;
 }
 
 void ParticleEffect::update(sf::RenderWindow& window) {
 	for (int i = 0; i < pCount; i++) {
-		particles[i].update(window);
+		particles[i]->update(window);
 	}
 }
 
 void ParticleEffect::render(sf::RenderWindow& window) {
 	for (int i = 0; i < pCount; i++) {
-		particles[i].render(window);
+		particles[i]->render(window);
 	}
 }
