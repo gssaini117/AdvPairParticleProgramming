@@ -21,7 +21,7 @@ ParticleEffect::~ParticleEffect() {
 }
 
 void ParticleEffect::createParticleArray() {
-	particles = new Particle[pCount];
+	particles = new CircleParticle[pCount];
 	for (int i = 0; i < pCount; i++) {
 		createParticle(i);
 	}

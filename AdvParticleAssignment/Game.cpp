@@ -4,17 +4,17 @@ using namespace gm;
 using namespace sf;
 
 Game::Game() {
-    particles = new CircleParticle* [MAX_EFFECTS];
+    effects = new ParticleEffect* [MAX_EFFECTS];
     for (int i = 0; i < MAX_EFFECTS; i++) {
-        particles[i] = nullptr;
+        effects[i] = nullptr;
     }
 }
 
 Game::~Game() {
     for (int i = 0; i < MAX_EFFECTS; i++) {
-        if (particles[i]) delete particles[i];
+        if (effects[i]) delete effects[i];
     }
-    delete[] particles;
+    delete[] effects;
 }
 
 void Game::inputs(RenderWindow& window) {
@@ -31,24 +31,24 @@ void Game::inputs(RenderWindow& window) {
 
             // iterate to allocate new 
             int cursor = 0;
-            while (particles[cursor]) {
+            while (effects[cursor]) {
                 cursor++;
                 if (cursor >= MAX_EFFECTS) {
-                    delete particles[0];
-                    particles[0] = nullptr;
+                    delete effects[0];
+                    effects[0] = nullptr;
                     cursor = 0;
                 }
             }
 
             // left click creates
             if (event.mouseButton.button == Mouse::Left) {
-                CircleParticle* circle = new CircleParticle(fMouse, Vector2f(0.3, -0.3), 1000, 20, Color::Red);
-                particles[cursor] = circle;
+                FireworkParticleEffect* firework = new FireworkParticleEffect(fMouse, 200);
+                effects[cursor] = firework;
             }
             // right click creates
             if (event.mouseButton.button == Mouse::Right) {
-                CircleParticle* circle = new CircleParticle(fMouse, Vector2f(-0.3, -0.3), 1000, 20, Color::Blue);
-                particles[cursor] = circle;
+                FireworkParticleEffect* firework = new FireworkParticleEffect(fMouse, 10);
+                effects[cursor] = firework;
             }
         }
     }
@@ -56,11 +56,11 @@ void Game::inputs(RenderWindow& window) {
 
 void Game::update(RenderWindow& window) {
     for (int i = 0; i < MAX_EFFECTS; i++) {
-        if (particles[i]) {
-            particles[i]->update(window);
-            if (!particles[i]->isAlive()) {
-                delete particles[i];
-                particles[i] = nullptr;
+        if (effects[i]) {
+            effects[i]->update(window);
+            if (!effects[i]->isAlive()) {
+                delete effects[i];
+                effects[i] = nullptr;
             }
         }
     }
@@ -69,8 +69,8 @@ void Game::update(RenderWindow& window) {
 void Game::render(RenderWindow& window) {
     window.clear();
     for (int i = 0; i < MAX_EFFECTS; i++) {
-        if (particles[i]) {
-            particles[i]->render(window);
+        if (effects[i]) {
+            effects[i]->render(window);
         }
     }
     window.display();

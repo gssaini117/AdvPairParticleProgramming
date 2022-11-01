@@ -17,10 +17,6 @@ void Particle::update(RenderWindow& window) {
 	velocity.y += 0.001;
 }
 
-void Particle::render(RenderWindow& window) {
-	window.draw(*shape);
-}
-
 const sf::Vector2f& Particle::getPosition() const {
 	return shape->getPosition();
 }

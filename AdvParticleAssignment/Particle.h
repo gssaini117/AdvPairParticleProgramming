@@ -19,7 +19,7 @@ namespace gm {
 		Particle();
 		~Particle();
 		virtual void update(sf::RenderWindow& window);
-		virtual void render(sf::RenderWindow& window);
+		virtual void render(sf::RenderWindow& window) = 0;
 		const sf::Vector2f& getPosition() const;
 		const sf::Vector2f& getVelocity() const;
 		void setPosition(const sf::Vector2f& pos);

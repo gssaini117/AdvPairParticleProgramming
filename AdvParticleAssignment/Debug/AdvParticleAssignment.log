@@ -1,2 +1,8 @@
-﻿  ParticleEffect.cpp
+﻿  FireworkParticleEffect.cpp
+C:\Users\gurki\OneDrive\Documents\GAME 230\AdvPairParticleProgramming\AdvParticleAssignment\FireworkParticleEffect.cpp(28,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\gurki\OneDrive\Documents\GAME 230\AdvPairParticleProgramming\AdvParticleAssignment\FireworkParticleEffect.cpp(29,49): warning C4305: 'argument': truncation from 'double' to 'float'
+  Game.cpp
+  ParticleEffect.cpp
+  main.cpp
+  Generating Code...
   AdvParticleAssignment.vcxproj -> C:\Users\gurki\OneDrive\Documents\GAME 230\AdvPairParticleProgramming\AdvParticleAssignment\Debug\AdvParticleAssignment.exe
