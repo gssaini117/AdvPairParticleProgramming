@@ -8,12 +8,15 @@
 #include <SFML/System.hpp>
 #include <SFML/OpenGL.hpp>
 #include <SFML/Main.hpp>
+#include "Particle.h"
+#include "CircleParticle.h"
 
 
 namespace gm {
 	class Game {
 	private:
-		
+		const int MAX_EFFECTS = 30;
+		CircleParticle** particles;
 	public:
 		Game();										// Constructor
 		~Game();									// Destructor

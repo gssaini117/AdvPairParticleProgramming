@@ -4,7 +4,8 @@ using namespace gm;
 using namespace sf;
 
 Particle::Particle() {
-
+	velocity = Vector2f(0, 0);
+	lifespan = 0;
 }
 
 Particle::~Particle() {
@@ -12,15 +13,15 @@ Particle::~Particle() {
 }
 
 void Particle::update(RenderWindow& window) {
-
+	shape->setPosition(Vector2f(shape->getPosition().x + velocity.x, shape->getPosition().y + velocity.y));
 }
 
 void Particle::render(RenderWindow& window) {
-
+	window.draw(*shape);
 }
 
 const sf::Vector2f& Particle::getPosition() const {
-	return position;
+	return shape->getPosition();
 }
 
 const sf::Vector2f& Particle::getVelocity() const {
@@ -28,7 +29,7 @@ const sf::Vector2f& Particle::getVelocity() const {
 }
 
 void Particle::setPosition(const sf::Vector2f& pos) {
-	position = pos;
+	shape->setPosition(pos);
 }
 
 void Particle::setVelocity(const sf::Vector2f& vel) {

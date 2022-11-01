@@ -12,7 +12,7 @@
 namespace gm {
 	class Particle {
 	protected:
-		sf::Vector2f position;
+		sf::Shape* shape;
 		sf::Vector2f velocity;
 		int lifespan;
 	public:

@@ -133,11 +133,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CircleParticle.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Particle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\PairParticleProgramming\Pair Particle Programming\Random.h" />
+    <ClInclude Include="CircleParticle.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Particle.h" />
   </ItemGroup>
