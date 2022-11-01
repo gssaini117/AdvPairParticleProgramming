@@ -14,6 +14,7 @@ Particle::~Particle() {
 
 void Particle::update(RenderWindow& window) {
 	shape->setPosition(Vector2f(shape->getPosition().x + velocity.x, shape->getPosition().y + velocity.y));
+	velocity.y += 0.001;
 }
 
 void Particle::render(RenderWindow& window) {

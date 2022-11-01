@@ -1,8 +1,7 @@
-#ifndef CIRCLEPARTICLE_H
-#define CIRCLEPARTICLE_H
+#ifndef CIRCLE_PARTICLE_H
+#define CIRCLE_PARTICLE_H
 
 #include "Particle.h"
-#include "Random.h"
 
 namespace gm {
 	class CircleParticle : public Particle {

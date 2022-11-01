@@ -32,6 +32,7 @@ void CircleParticle::update(sf::RenderWindow& window) {
 	shape->setPosition(Vector2f(shape->getPosition().x + velocity.x, shape->getPosition().y + velocity.y));
 	velocity.y += 0.001;
 	lifespan--;
+	fade();
 }
 
 void CircleParticle::render(sf::RenderWindow& window) {
@@ -41,12 +42,12 @@ void CircleParticle::render(sf::RenderWindow& window) {
 float CircleParticle::getRadius() {
 	return shape->getRadius();
 }
-
 void CircleParticle::setRadius(float radius) {
 	shape->setRadius(radius);
 }
 
 void CircleParticle::fade() {
-	color.a = 255 * lifespan / maxLife;
+	int alpha = 255 * lifespan / maxLife;
+	color = Color(color.r, color.g, color.b, alpha);
 	shape->setFillColor(color);
 }

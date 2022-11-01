@@ -42,12 +42,12 @@ void Game::inputs(RenderWindow& window) {
 
             // left click creates
             if (event.mouseButton.button == Mouse::Left) {
-                CircleParticle* circle = new CircleParticle(fMouse, Vector2f(0.3, -0.3), 2000, 20, Color::Red);
+                CircleParticle* circle = new CircleParticle(fMouse, Vector2f(0.3, -0.3), 1000, 20, Color::Red);
                 particles[cursor] = circle;
             }
             // right click creates
             if (event.mouseButton.button == Mouse::Right) {
-                CircleParticle* circle = new CircleParticle(fMouse, Vector2f(-0.3, -0.3), 2000, 20, Color::Blue);
+                CircleParticle* circle = new CircleParticle(fMouse, Vector2f(-0.3, -0.3), 1000, 20, Color::Blue);
                 particles[cursor] = circle;
             }
         }

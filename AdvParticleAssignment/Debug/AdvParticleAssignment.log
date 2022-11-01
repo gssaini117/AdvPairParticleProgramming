@@ -1,15 +1,2 @@
-﻿  Game.cpp
-C:\Users\gurki\OneDrive\Documents\GAME 230\AdvPairParticleProgramming\AdvParticleAssignment\Game.cpp(45,87): warning C4305: 'argument': truncation from 'double' to 'T'
-          with
-          [
-              T=float
-          ]
-C:\Users\gurki\OneDrive\Documents\GAME 230\AdvPairParticleProgramming\AdvParticleAssignment\Game.cpp(50,88): warning C4305: 'argument': truncation from 'double' to 'T'
-          with
-          [
-              T=float
-          ]
-  main.cpp
-  Generating Code...
-  LINK : C:\Users\gurki\OneDrive\Documents\GAME 230\AdvPairParticleProgramming\AdvParticleAssignment\Debug\AdvParticleAssignment.exe not found or not built by the last incremental link; performing full link
+﻿  ParticleEffect.cpp
   AdvParticleAssignment.vcxproj -> C:\Users\gurki\OneDrive\Documents\GAME 230\AdvPairParticleProgramming\AdvParticleAssignment\Debug\AdvParticleAssignment.exe
